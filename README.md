@@ -59,13 +59,31 @@
    소x  |  Cascade Mask R-CNN_r50_fpn_1x_coco | 0.5850912865 |
    소x  |  Mask Scoring R-CNN_r50_fpn_1x_coco | 0.5636328897  |
    봉x  |  Hybird Task Cascade=htc_r50_fpn_1x_coco | 0.5548114978  |
-   봉x  |  YOLACT_r50_1x8_coco | 0.354253251 |
    국x  |  Mask R-CNN_r50_fpn_1x_coco  |  0.5472226479 |
 
 
 
-   3주차(7/25 ~ 7/31) : 전처리 - Augmentation(이미지 증강 기법) 리스트업하여 각각 어떤 증강기법을 사용할 것인지 분배하고 성능확인 및 어떤걸 쓸지 선정.
+   3주차(7/25 ~ 7/31) : 전처리 -Transform(이미지중 일부를 변형하여 학습에 사용),  Augmentation(이미지 증강) 리스트업하여 각각 어떤 기법을 사용할 것인지 분배하고 성능확인 및 어떤걸 쓸지 선정.
    backbone 분배후 성능확인 및 backbone 선정 <br/>
+   
+   
+   - Online Data augmentation list-up(Transform)   
+   
+   : shear, rotate, resize, flip, equalize, brightness, contrast, minIoUrandomcrop, Albumentation
+   
+   
+   
+   조원 | Augmentation | 점수
+   -----|-------|-------|
+   수x  | 모든 augmentation  |    |
+   국x  | resize - (1024,1024), (1280,1024), (1333,800)  |    |
+   소x  | equalize, brightness, contrast |    |
+   봉x  | albumentation(Equalize, Brightness, contrast)  |    |
+   현x  | CascadeMaskRcnn_x101_24e_miniourandomcrop | 0.6023441395 |
+     
+   <br/>
+
+
 
    4주차(8/1 ~ 8/8) : Optimizer, Lr-scheduler 분배 후 선정, 성능향상을 위한 하이퍼파라미터 조정. <br/><br/>
    
