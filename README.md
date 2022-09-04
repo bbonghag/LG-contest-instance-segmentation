@@ -46,7 +46,7 @@
    - 왜 모델을 분배하였는가??
      - MMDetection에는 많은 Instace Segmentation 모델이 존재합니다
      
-     - 데이터 분석후 데이터와 맞지 않다는 모델들을 제외하고도 여러 많은 모델들이 존재하는데 각 모델들을 공부한다음 데이터와 맞다고 생각되는 모델을 정하기엔 시간이 촉박하여 5명이서 모델들을 분배후 성능을 보고 모델을 선정하기로 하였습니다
+     - 데이터 분석후 데이터와 맞지 않다는 모델들을 제외하고도 여러 많은 모델들이 존재하는데 각 모델들을 공부한다음 데이터와 맞다고 생각되는 모델을 정하기엔 시간이 촉박하여 조원들에게 모델들을 분배후 성능을 보고 모델을 선정하기로 하였습니다
      
      <br/>
      
@@ -64,22 +64,26 @@
 
 
    3주차(7/25 ~ 7/31) : 전처리 -Transform(이미지중 일부를 변형하여 학습에 사용),  Augmentation(이미지 증강) 리스트업하여 각각 어떤 기법을 사용할 것인지 분배하고 성능확인 및 어떤걸 쓸지 선정.
-   backbone 분배후 성능확인 및 backbone 선정 <br/>
+   
+    backbone 분배후 성능확인 및 backbone 선정 <br/>
    
    
    - Online Data augmentation list-up(Transform)   
    
    : shear, rotate, resize, flip, equalize, brightness, contrast, minIoUrandomcrop, Albumentation
    
+   : 동일 조건으로 고정. - cascade_rcnn_x101_32x4d_fpn_1x_coco, 12epoch, IOU threshold(0.3 ~ 0.6)
    
    
-   조원 | Augmentation | 점수
+   조원 | Augmentation | 점수 |
    -----|-------|-------|
-   수x  | 모든 augmentation  |    |
-   국x  | resize - (1024,1024), (1280,1024), (1333,800)  |    |
-   소x  | equalize, brightness, contrast |    |
-   봉x  | albumentation(Equalize, Brightness, contrast)  |    |
-   현x  | CascadeMaskRcnn_x101_24e_miniourandomcrop | 0.6023441395 |
+   수x  | all augmentation   |  0.5452023496  |
+   국x  | resize : 1024,1024 |  0.6041639844  |
+   국x  | resize : 1280,1024 |  0.6084128911  |
+   국x  | resize : 1333,800  |  0.6065363398  |
+   소x  | equalize, brightness, contrast |  0.6044010023  |
+   봉x  | albumentation(Equalize, Brightness, contrast)  |  0.6042227322  |
+   현x  | miniourandomcrop | 0.6023441395 |
      
    <br/>
 
