@@ -15,7 +15,7 @@
 
 주제 : 유체상에 떠다니는 입자를 촬영한 화상을 바탕으로 각 입자와 그 형상을 최대한 잘 검출해내는 Instance Segmentation 모델 개발. <br/>
 
-팀 : DeepDream(조장 : 김x현, 조원 : 김x나, 이x정, 소x희, 이x학) <br/>
+팀 : DeepDream(조장 : 김수현, 조원 : [김현나](https://github.com/hna12), 이x정, 소x희, 이봉학) <br/>
 
 
 
@@ -48,9 +48,8 @@
 
    #### 2주차(7/18 ~ 7/24)  
    
-   Segmentation model 조원들에게 분배후 제출하여 점수가 높은 모델들  (SCNet, Mask R-CNN, Mask Scoring R-CNN, Cascade Mask R-CNN)
-   선정 후 model 공부, modeling <br/>
-   ( Mask R-CNN은 다른 모델들의 베이스 모델이기에 같이 공부하려고 선정! )
+   Segmentation model 조원들에게 분배후 제출하여 점수가 높은 모델들 선정 후 model 공부, modeling <br/>
+   
    
    
    - 왜 모델을 분배하였는가??
@@ -70,21 +69,26 @@
    소x  |  Mask Scoring R-CNN_r50_fpn_1x_coco | 0.5636328897  |
    봉x  |  Hybird Task Cascade=htc_r50_fpn_1x_coco | 0.5548114978  |
    국x  |  Mask R-CNN_r50_fpn_1x_coco  |  0.5472226479 |
+   
+   => 👍 SCNet, Mask R-CNN, Mask Scoring R-CNN, Cascade Mask R-CNN  선정! 
+   
+   ( Mask R-CNN은 다른 모델들의 베이스 모델이기에 같이 공부하려고 선정! )
 
    <br/>
 
    #### 3주차(7/25 ~ 7/31)  
    
-   전처리 -Transform(이미지중 일부를 변형하여 학습에 사용),  Augmentation(이미지 증강) 리스트업하여 각각 어떤 기법을 사용할 것인지 분배하고 성능확인 및 어떤걸 쓸지 선정.
+   전처리 
+   - Transform(이미지중 일부를 변형하여 학습에 사용)  
+      
+   - Augmentation(이미지 증강) 리스트업하여 각각 어떤 기법을 사용할 것인지 분배하고 성능확인 및 어떤걸 쓸지 선정.
    
-   backbone 분배후 성능확인 및 backbone 선정 <br/>
+   - backbone 분배후 성능확인 및 backbone 선정 <br/>
    
    
-   - Online Data augmentation list-up(Transform)   
-   
-   : shear, rotate, resize, flip, equalize, brightness, contrast, minIoUrandomcrop, Albumentation
-   
-   : 동일 조건으로 고정. - cascade_rcnn_x101_32x4d_fpn_1x_coco, 12epoch, IOU threshold(0.3 ~ 0.6)
+   - Online Data augmentation list-up(Transform)  
+     - shear, rotate, resize, flip, equalize, brightness, contrast, minIoUrandomcrop, Albumentation
+     - 동일 조건으로 고정. - cascade_rcnn_x101_32x4d_fpn_1x_coco, 12epoch, IOU threshold(0.3 ~ 0.6)
    
    
    조원 | Augmentation | 점수 |
