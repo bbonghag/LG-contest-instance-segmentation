@@ -37,7 +37,10 @@
    객체 카테고리는 1개(Normal) 클래스만 존재, 이미지 해상도는 (Height, Width) = (1024, 1280) 크기 <br/>
 
    - 데이터 분석
-     - 이미지 상의 존재하는 유체를 검출하는 모델 
+     - 데이터셋의 이미지와 마스킹 좌표 시각화 
+     - <img src="https://user-images.githubusercontent.com/103362361/188362239-3ce1dbd7-856b-44c9-962e-fc9e23897dcd.png"  width="250" height="250"/> <img src="https://user-images.githubusercontent.com/103362361/188362346-9c810636-9c27-438d-99b0-ad0f77bf76ca.png"  width="250" height="250"/>
+     - 💡 시각화 해본 결과, 마스킹된 부분들은 이미지만 봤을때 예상한 마스킹보다 훨씬 적었다. 
+     - ➡ 데이터의 복잡도가 낮다고 판단, 복잡한 모델을 사용하거나 과한 Augmentation이 적용될 경우 성능이 저하되지 않을까 라는 생각을 하였다. 
 
 
 ### 2. 진행 내용
@@ -65,11 +68,11 @@
    
    조원 | 분배모델| 점수
    -----|-------|-------|
-   현x  |  SCNet_r50_fpn_1x(12epoch)_coco  |  0.5861291233  |
-   수x  |  Solov2 |  0.5393581245  |
-   소x  |  Cascade Mask R-CNN_r50_fpn_1x_coco | 0.5850912865 |
+   현나  |  SCNet_r50_fpn_1x(12epoch)_coco  |  0.5861291233  |
+   수현  |  Solov2 |  0.5393581245  |
+   소x   |  Cascade Mask R-CNN_r50_fpn_1x_coco | 0.5850912865 |
    소x  |  Mask Scoring R-CNN_r50_fpn_1x_coco | 0.5636328897  |
-   봉x  |  Hybird Task Cascade=htc_r50_fpn_1x_coco | 0.5548114978  |
+   봉학  |  Hybird Task Cascade=htc_r50_fpn_1x_coco | 0.5548114978  |
    국x  |  Mask R-CNN_r50_fpn_1x_coco  |  0.5472226479 |
    
  
@@ -97,13 +100,13 @@
    
    조원 | Augmentation | 점수 |
    -----|-------|-------|
-   수x  | all augmentation   |  0.5452023496  |
+   수현  | all augmentation   |  0.5452023496  |
    국x  | resize : 1024,1024 |  0.6041639844  |
    국x  | resize : 1280,1024 |  0.6084128911  |
    국x  | resize : 1333,800  |  0.6065363398  |
    소x  | equalize, brightness, contrast |  0.6044010023  |
-   봉x  | albumentation(Equalize, Brightness, contrast)  |  0.6042227322  |
-   현x  | miniourandomcrop | 0.6023441395 |
+   봉학  | albumentation(Equalize, Brightness, contrast)  |  0.6042227322  |
+   현나  | miniourandomcrop | 0.6023441395 |
      
    <br/>
 
