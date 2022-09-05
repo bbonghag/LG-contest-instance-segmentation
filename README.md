@@ -26,7 +26,10 @@
 
 ## WorkFlow 
 
-<!-- 각 진행상황에 대해 왜 이렇게 했고 어떻게 생각을 했는지에 대한 원인, 고찰이 들어가야 한다. -->
+<!-- 
+각 진행상황에 대해 왜 이렇게 했고 어떻게 생각을 했는지에 대한 원인, 고찰이 들어가야 한다.
+왜 워크플로우를 왜 이렇게 잡았는지, 왜 Augmentation을 리스트업 하고 Backbone을 정했는지.
+-->
 
 ### 1. 데이터  
    
@@ -71,9 +74,9 @@
    현나  |  SCNet_r50_fpn_1x(12epoch)_coco  |  0.5861291233  |
    수현  |  Solov2 |  0.5393581245  |
    소x   |  Cascade Mask R-CNN_r50_fpn_1x_coco | 0.5850912865 |
-   소x  |  Mask Scoring R-CNN_r50_fpn_1x_coco | 0.5636328897  |
+   소x   |  Mask Scoring R-CNN_r50_fpn_1x_coco | 0.5636328897  |
    봉학  |  Hybird Task Cascade=htc_r50_fpn_1x_coco | 0.5548114978  |
-   국x  |  Mask R-CNN_r50_fpn_1x_coco  |  0.5472226479 |
+   국x   |  Mask R-CNN_r50_fpn_1x_coco  |  0.5472226479 |
    
  
     
@@ -100,13 +103,13 @@
    
    조원 | Augmentation | 점수 |
    -----|-------|-------|
-   수현  | all augmentation   |  0.5452023496  |
+   수현 | all augmentation   |  0.5452023496  |
    국x  | resize : 1024,1024 |  0.6041639844  |
    국x  | resize : 1280,1024 |  0.6084128911  |
    국x  | resize : 1333,800  |  0.6065363398  |
    소x  | equalize, brightness, contrast |  0.6044010023  |
-   봉학  | albumentation(Equalize, Brightness, contrast)  |  0.6042227322  |
-   현나  | miniourandomcrop | 0.6023441395 |
+   봉학 | albumentation(Equalize, Brightness, contrast)  |  0.6042227322  |
+   현나 | miniourandomcrop | 0.6023441395 |
      
    <br/>
 
