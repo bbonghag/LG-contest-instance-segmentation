@@ -36,6 +36,8 @@
    
    객체 카테고리는 1개(Normal) 클래스만 존재, 이미지 해상도는 (Height, Width) = (1024, 1280) 크기 <br/>
 
+   - 데이터 분석
+     - 이미지 상의 존재하는 유체를 검출하는 모델 
 
 
 ### 2. 진행 내용
@@ -52,7 +54,7 @@
    
    
    
-   - 왜 모델을 분배하였는가??
+   - 💬 왜 모델을 분배하였는가❔❔
      - MMDetection에는 많은 Instace Segmentation 모델이 존재합니다
      
      - 데이터 분석후 데이터와 맞지 않다는 모델들을 제외하고도 여러 많은 모델들이 존재하는데 각 모델들을 공부한다음 데이터와 맞다고 생각되는 모델을 정하기엔 시간이 촉박하여 조원들에게 모델들을 분배후 성능을 보고 모델을 선정하기로 하였습니다
@@ -70,7 +72,9 @@
    봉x  |  Hybird Task Cascade=htc_r50_fpn_1x_coco | 0.5548114978  |
    국x  |  Mask R-CNN_r50_fpn_1x_coco  |  0.5472226479 |
    
-   => 👍 SCNet, Mask R-CNN, Mask Scoring R-CNN, Cascade Mask R-CNN  선정! 
+ 
+    
+   => 👍 SCNet, Mask R-CNN, Mask Scoring R-CNN, Cascade Mask R-CNN  선정 
    
    ( Mask R-CNN은 다른 모델들의 베이스 모델이기에 같이 공부하려고 선정! )
 
