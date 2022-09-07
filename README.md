@@ -65,6 +65,12 @@
      
      - 데이터 분석후 데이터와 맞지 않다는 모델들을 제외하고도 여러 많은 모델들이 존재하는데 각 모델들을 공부한다음 데이터와 맞다고 생각되는 모델을 정하기엔 시간이 촉박하여 조원들에게 모델들을 분배후 성능을 보고 모델을 선정하기로 하였습니다
      
+     
+     
+   - 💬 왜 모델을 선택하고 Augmentation순으로 Workflow를 잡았는가 ❔❔
+     - 데이터를 보고 데이터의 복잡도가 높지 않다고 판단, 그러면 모델의 복잡도를 먼저 고려한다음 이미지 증강을 
+     
+     
      <br/>
      
    
@@ -93,7 +99,20 @@
       
    - Augmentation(이미지 증강) 리스트업하여 각각 어떤 기법을 사용할 것인지 분배하고 성능확인 및 어떤걸 쓸지 선정.
    
-   - backbone 분배후 성능확인 및 backbone 선정 <br/>
+   - backbone 분배후 성능확인 및 backbone 선정 
+   
+   조원 | Backbone |
+   -----|-------|
+   수현 | ResNet stricks back, EfficientNet, ConvNeXt   |  
+   국x  | HRNet, Generalized Attention  |  
+   소x  | GCNet, Res2Net |  
+   봉학 | PVT, PVTv2, Swin  |  
+   현나 | RegNet, ResNest | 
+   
+   => 👍 ResNext, ResNet strikes back을 최종 Backbone으로 선정.
+   
+   
+   <br/>
    
    
    - Online Data augmentation list-up(Transform)  
@@ -117,7 +136,20 @@
 
    #### 4주차(8/1 ~ 8/8)  
    
-   Optimizer, Lr-scheduler 분배 후 선정, 성능향상을 위한 하이퍼파라미터 조정. <br/><br/>
+   Optimizer 분배 후 선정, 성능향상을 위한 하이퍼파라미터 조정. 
+   
+   조원 | Optimizer |
+   -----|-------|
+   수현 | RMSprop, Rprop   |  
+   국x  | ASGD, LBFGS  |  
+   소x  | Adadelta, Adagrad |  
+   봉학 | NAdam, Radam  |  
+   현나 | SparseAdam, Adamax | 
+    
+   => 👍 Adadelta를 최종 Opitmizer로 선정
+   
+   <br/><br/>
+   
    
   
   
