@@ -15,7 +15,7 @@
 
 주제 : 유체상에 떠다니는 입자를 촬영한 화상을 바탕으로 각 입자와 그 형상을 최대한 잘 검출해내는 Instance Segmentation 모델 개발. <br/>
 
-팀 : DeepDream(조장 : 김수현, 조원 : [김현나](https://github.com/hna12), 이x정, 소x희, 이봉학) <br/>
+팀 : DeepDream <br/>
 
 
 
