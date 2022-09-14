@@ -77,14 +77,14 @@
      
    
    
-   조원 | 분배모델| 점수
-   -----|-------|-------|
-   현나  |  SCNet_r50_fpn_1x(12epoch)_coco  |  0.5861291233  |
-   수현  |  Solov2 |  0.5393581245  |
-   소x   |  Cascade Mask R-CNN_r50_fpn_1x_coco | 0.5850912865 |
-   소x   |  Mask Scoring R-CNN_r50_fpn_1x_coco | 0.5636328897  |
-   봉학  |  Hybird Task Cascade=htc_r50_fpn_1x_coco | 0.5548114978  |
-   국x   |  Mask R-CNN_r50_fpn_1x_coco  |  0.5472226479 |
+   분배모델| 점수
+   -------|-------|
+   SCNet_r50_fpn_1x(12epoch)_coco  |  0.5861291233  |
+   Solov2 |  0.5393581245  |
+   Cascade Mask R-CNN_r50_fpn_1x_coco | 0.5850912865 |
+   Mask Scoring R-CNN_r50_fpn_1x_coco | 0.5636328897  |
+   Hybird Task Cascade=htc_r50_fpn_1x_coco | 0.5548114978  |
+   Mask R-CNN_r50_fpn_1x_coco  |  0.5472226479 |
    
  
     
@@ -103,13 +103,13 @@
    
    - backbone 분배후 성능확인 및 backbone 선정 
    
-   조원 | Backbone |
-   -----|-------|
-   수현 | ResNet stricks back, EfficientNet, ConvNeXt   |  
-   국x  | HRNet, Generalized Attention  |  
-   소x  | GCNet, Res2Net |  
-   봉학 | PVT, PVTv2, Swin  |  
-   현나 | RegNet, ResNest | 
+   Backbone |
+   -------|
+   ResNet stricks back, EfficientNet, ConvNeXt   |  
+   HRNet, Generalized Attention  |  
+   GCNet, Res2Net |  
+   PVT, PVTv2, Swin  |  
+   RegNet, ResNest | 
    
    => 👍 ResNext, ResNet strikes back을 최종 Backbone으로 선정.
    
@@ -122,15 +122,15 @@
      - 동일 조건으로 고정. - cascade_rcnn_x101_32x4d_fpn_1x_coco, 12epoch, IOU threshold(0.3 ~ 0.6)
    
    
-   조원 | Augmentation | 점수 |
-   -----|-------|-------|
-   수현 | all augmentation   |  0.5452023496  |
-   국x  | resize : 1024,1024 |  0.6041639844  |
-   국x  | resize : 1280,1024 |  0.6084128911  |
-   국x  | resize : 1333,800  |  0.6065363398  |
-   소x  | equalize, brightness, contrast |  0.6044010023  |
-   봉학 | albumentation(Equalize, Brightness, contrast)  |  0.6042227322  |
-   현나 | miniourandomcrop | 0.6023441395 |
+   Augmentation | 점수 |
+   -------|-------|
+   all augmentation   |  0.5452023496  |
+   resize : 1024,1024 |  0.6041639844  |
+   resize : 1280,1024 |  0.6084128911  |
+   resize : 1333,800  |  0.6065363398  |
+   equalize, brightness, contrast |  0.6044010023  |
+   albumentation(Equalize, Brightness, contrast)  |  0.6042227322  |
+   miniourandomcrop | 0.6023441395 |
      
    <br/>
 
@@ -140,13 +140,13 @@
    
    Optimizer 분배 후 선정, 성능향상을 위한 하이퍼파라미터 조정. 
    
-   조원 | Optimizer |
-   -----|-------|
-   수현 | RMSprop, Rprop   |  
-   국x  | ASGD, LBFGS  |  
-   소x  | Adadelta, Adagrad |  
-   봉학 | NAdam, Radam  |  
-   현나 | SparseAdam, Adamax | 
+   Optimizer |
+   -------|
+   RMSprop, Rprop   |  
+   ASGD, LBFGS  |  
+   Adadelta, Adagrad |  
+   NAdam, Radam  |  
+   SparseAdam, Adamax | 
     
    => 👍 Adadelta를 최종 Opitmizer로 선정
    
