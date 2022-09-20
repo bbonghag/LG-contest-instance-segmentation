@@ -64,7 +64,13 @@
 
 
 ### Review
--
+-데이터 분석
+ - 데이터셋의 이미지와 마스킹 좌표 시각화 
+ 
+ <img src="https://user-images.githubusercontent.com/103362361/188362239-3ce1dbd7-856b-44c9-962e-fc9e23897dcd.png"  width="250" height="250"/> <img src="https://user-images.githubusercontent.com/103362361/188362346-9c810636-9c27-438d-99b0-ad0f77bf76ca.png"  width="250" height="250"/>
+ - 💡 시각화 해본 결과, 마스킹된 부분들은 이미지만 봤을때 예상한 마스킹보다 훨씬 적었다. 
+ - ➡ 데이터의 복잡도가 낮다고 판단, 복잡한 모델을 사용하거나 과한 Augmentation이 적용될 경우 성능이 저하되지 않을까 라는 생각을 하였다. 
+
 
 
 
