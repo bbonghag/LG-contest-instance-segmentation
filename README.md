@@ -27,10 +27,10 @@
 - train dataset 520장, Test dataset 350장 및 coco dataset 형식의 어노테이션 파일(입자 레이블링 형식에 따라 label_train.json, label(polygon)train.json) 
 - 객체 카테고리는 1개(Normal) 클래스만 존재, 이미지 해상도는 (Height, Width) = (1024, 1280) 크기
 
+
 ### Progress
 - 1주차(7/13 ~ 7/17)  
   - Instance segmentation 공부, MMdetection 라이브러리 사용법 익히기, base-line 돌려보기, EDA(데이터분석) 
-  - MMdetection Reference : [MMDetection tutorial](https://greeksharifa.github.io/references/2021/09/05/MMDetection02/),  [MMDetection Config](https://velog.io/@dust_potato/MM-Detection-Config-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0)
 - 2주차(7/18 ~ 7/24)  
   - Segmentation model 조원들에게 분배후 제출하여 점수가 높은 모델들 선정 후 model 공부, modeling
 - 3주차(7/25 ~ 7/31)  
@@ -40,6 +40,7 @@
     - backbone 분배후 성능확인 및 backbone 선정 
 - 4주차(8/1 ~ 8/8)  
   - Optimizer 분배 후 선정, 성능향상을 위한 하이퍼파라미터 조정.
+
 
 ### Models  
 - SCNet, Mask R-CNN, Mask Scoring R-CNN, Cascade Mask R-CNN
@@ -67,6 +68,7 @@
 -데이터 분석
  - 데이터셋의 이미지와 마스킹 좌표 시각화 
  
+ 
  <img src="https://user-images.githubusercontent.com/103362361/188362239-3ce1dbd7-856b-44c9-962e-fc9e23897dcd.png"  width="250" height="250"/> <img src="https://user-images.githubusercontent.com/103362361/188362346-9c810636-9c27-438d-99b0-ad0f77bf76ca.png"  width="250" height="250"/>
  - 💡 시각화 해본 결과, 마스킹된 부분들은 이미지만 봤을때 예상한 마스킹보다 훨씬 적었다. 
  - ➡ 데이터의 복잡도가 낮다고 판단, 복잡한 모델을 사용하거나 과한 Augmentation이 적용될 경우 성능이 저하되지 않을까 라는 생각을 하였다. 
@@ -75,10 +77,11 @@
 
 
 ### References
--
+- https://github.com/open-mmlab/mmdetection
+- https://greeksharifa.github.io/references/2021/09/05/MMDetection02/  
+- https://velog.io/@dust_potato/MM-Detection-Config-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0
 
  
-- 추가해야 할것 :  
 
 
 
